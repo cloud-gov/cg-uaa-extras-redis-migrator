@@ -1,0 +1,11 @@
+---
+applications:
+- name: redis-migrator
+  health-check-type: process
+  no-route: true
+  buildpacks:
+    - python_buildpack
+  memory: 256M
+  services:
+    - redis-accounts
+    - redis-accounts-aws
